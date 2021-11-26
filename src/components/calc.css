@@ -1,0 +1,78 @@
+.header {
+  border-radius: 20px 20px 0 0;
+  background: rgba(0, 0, 0, 0.75);
+  grid-column: 1/-1;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem 1.2rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.current {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.grid-calc {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.grid-calc button {
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 2rem;
+  transition: all 0.3s ease-out;
+}
+
+.grid-calc button:nth-child(17) {
+  border-radius: 0 0 0 20px;
+}
+
+.grid-calc button:nth-child(19) {
+  border-radius: 0 0 20px 0;
+}
+
+.grid-calc button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.grid-calc button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+  .grid-calc {
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .grid-calc {
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: minmax(5rem, auto) repeat(5, 4rem);
+  }
+  .previous {
+    font-size: 1.1rem;
+  }
+}
