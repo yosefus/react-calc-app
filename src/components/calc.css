@@ -67,6 +67,9 @@
 }
 
 @media screen and (max-width: 350px) {
+  .grid-calc button {
+    font-size: 1.5rem;
+  }
   .grid-calc {
     display: grid;
     grid-template-columns: repeat(4, 4rem);
